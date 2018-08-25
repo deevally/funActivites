@@ -8,17 +8,24 @@
         </div>
         <div class="col-lg-12  mt-5">
 
-                <div><h3>Activity: <em>"<%= act.activity %>"</em></h3></div>
-                <div><h3>Type of  Activity: <em>"<%= act.type %>"</em></h3></div>
-                <div><h3>No of friends that you can enjoy this Activity with:  <em><%= act.participants %></em></h3></div>    
+                <div><h3>ACTIVITY: <em>"<%= act.activity %>"</em></h3></div>
+                <div><h3>TYPE OF ACTIVITY: <em>"<%= act.type %>"</em></h3></div>
+                <% if(act.participants > 1){ %>
+                    <div><h3>NUMBER OF FRIENDS TO ENJOY THIS ACTIVITY WITH:  <em><%= act.participants %> Friends</em></h3></div>    
+
+               <% } else if (act.participants === 1){ %>
+                    <div><h3>NUMBER OF FRIENDS TO ENJOY THIS ACTIVITY WITH:  <em><%= act.participants %> Friend</em></h3></div>    
+                   
+                <% } %>
                 
                 <a class="btn btn-dark btn-sm mt-5" href="#" onClick="window.location.reload()">Search For Another Fun Activity</a>
 
 
         </div>
     </div>
+    <a class="btn btn-dark btn-sm mt-5" href="/">Go Back</a>
+
 </div>
-<a class="btn btn-dark btn-sm mt-5" href="/">Go Back</a>
 
 
 

@@ -27,11 +27,11 @@ request(url, function(error, response , body){
 });
 });
 
-/*
+
 app.listen(3000 ,function(){
     console.log("server started");
 });
-*/
+
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("server started");
